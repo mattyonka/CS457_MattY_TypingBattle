@@ -34,11 +34,7 @@
 - **Transport Protocol:** TCP
 - **Serialization Format:** [JSON]
 - **Framing Mechanism:** [Newline-delimited (`\n`) JSON payloads]
-- Newline delimited JSONs will be used, as this makes it easier for the payload to be as long as it needs to be.
-- Depending on the game settings, the messages to be typed will be of variable lengths, which makes this method
-- the easiest way to implement.
-- The type of message will have to be implied by the game state, as the user shouldn't have to type in a specific command
-- while under a time pressure.
+- Newline delimited JSONs will be used, as this makes it easier for the payload to be as long as it needs to be. Depending on the game settings, the messages to be typed will be of variable lengths, which makes this method the easiest way to implement. The type of message will have to be implied by the game state, as the user shouldn't have to type in a specific command while under a time pressure.
 
 ### 2.2 Message Schema Definitions
 
