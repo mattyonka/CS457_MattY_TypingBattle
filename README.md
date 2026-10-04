@@ -1,6 +1,7 @@
 # CS 457 Project Statement of Work (SOW) & Protocol Specification Template
 
 **Student Name:** Matthew Yonkaitis
+
 **Course:** CS 457 - Computer Networks  
 **Target Server Domain:** `server.yonkaitis.edu`  
 
