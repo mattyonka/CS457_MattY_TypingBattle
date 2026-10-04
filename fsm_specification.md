@@ -1,5 +1,5 @@
 
-'''flowchart TB
+```flowchart TB
     A["Init"] -- Server Started &amp; Listening --> B("WAITING_FOR_PLAYERS")
     B -- 2 clients connected --> C{"GAME_START"}
     n1["Filled Circle"] --> A
@@ -18,4 +18,4 @@
     n6 -- TCP Connection Restored --> D
 
     n1@{ shape: f-circ}
-'''
+```
