@@ -66,7 +66,8 @@
 
 ### 2.3 Game State Machine (FSM) Design (Sprint 1 Deliverable)
 - **State Transitions:** 
-```flowchart TB
+```
+flowchart TB
     A["Init"] -- Server Started &amp; Listening --> B("WAITING_FOR_PLAYERS")
     B -- 2 clients connected --> C{"GAME_START"}
     n1["Filled Circle"] --> A
@@ -77,10 +78,18 @@
     n4 -- Send out message prompt --> D
     n2 -- No player is below 0 hp --> n4
     n3 -- Reset State --> B
-    n2 -- Only one player has sent move, still waiting on second player--> D
+    n2 -- Only one player has sent move, still waiting on second player --> D
+    D -- player uses QUIT command --> n5["QUIT"]
+    n5 -- Message stating game is terminated --> n3
+    D -- TCP Connection temporarily lost --> n6["Disconnect"]
+    n6 -- TCP Timeout/ Abrupt Termination Not Resolved --> n5
+    n6 -- TCP Connection Restored --> D
 
     n1@{ shape: f-circ}
   ```
+
+### 2.4 Connection Termination & Socket Lifecycle Management
+- **
 ---
 
 ## 3. Game Behavior & Server Concurrency Architecture (Sprint 2 Deliverable)
