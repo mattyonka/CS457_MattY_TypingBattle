@@ -1,5 +1,5 @@
 
-```
+```mermaid
 flowchart TB
     A["INIT"] -- Server Started &amp; Listening --> B("WAITING_FOR_PLAYERS")
     B -- 2 clients connected --> C{"GAME_START"}
