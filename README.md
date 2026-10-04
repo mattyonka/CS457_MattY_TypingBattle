@@ -27,8 +27,3 @@
 - **Draw/Tie Condition:** A draw or tie in any round will result in no damage being done to either player's health. The game will continue until one player wins/loses or if one player decides to quit.
 
 ---
-
-### 5.3 Deployment Strategy & Wireshark Trace Capture
-- **CML Deployment Strategy:** Deploy `server.py` onto Subnet C node (`192.168.20.100`) behind Router R2, and `client.py` onto Subnet A and Subnet B nodes behind Router R1.
-- **Cisco Infrastructure Configuration:** Router R1 DHCP pools (`CLIENT1_POOL`, `CLIENT2_POOL`) and Router R2 authoritative DNS (`ip host server.[lastname].edu 192.168.20.100`).
-- **Wireshark Trace Capture Plan:** Capture DHCP DORA exchange (`dhcp_negotiation.pcap`) and DNS query/response resolution (`dns_lookup.pcap`).
