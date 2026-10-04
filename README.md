@@ -63,7 +63,7 @@
 
 ### 2.3 Game State Machine (FSM) Design (Sprint 1 Deliverable)
 - **State Transitions:** Detail state flow: `INIT` -> `WAITING_FOR_PLAYERS` -> `PLAYER_TURN` -> `EVALUATE_MOVE` -> `CHECK_WIN_DRAW` -> `GAME_OVER` -> `CLEANUP`.
-flowchart TB
+'''flowchart TB
     A["Init"] -- Server Started &amp; Listening --> B("WAITING_FOR_PLAYERS")
     B -- 2 clients connected --> C{"GAME_START"}
     n1["Filled Circle"] --> A
@@ -77,6 +77,7 @@ flowchart TB
     n2 -- Only one player has sent move, still waiting on second player--> D
 
     n1@{ shape: f-circ}
+  '''
 ---
 
 ## 3. Game Behavior & Server Concurrency Architecture (Sprint 2 Deliverable)
