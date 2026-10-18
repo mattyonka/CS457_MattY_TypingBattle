@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant Player1Client as Player 1<br/>(Client 0)
     participant GameServer as Game Server
@@ -38,3 +39,4 @@ sequenceDiagram
         Player1Client->>GameServer: QUIT
         GameServer->>Player2Client: GAME_OVER
     end
+```
