@@ -1,4 +1,4 @@
-# Score Board Design
+# 2.3 Score Board Design
 * Scoring will consist of two things: The health of player 1 and player 2. They will be simple integer values stored in the Host's memory. 
 
 * To update the players on scores, a STATE_UPDATE message will be sent out that consists of each player's current health and the damage that one player sustained in the round. 
