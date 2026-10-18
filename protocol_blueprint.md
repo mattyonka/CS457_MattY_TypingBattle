@@ -65,7 +65,7 @@
 {
   "msg_type": "STATE_UPDATE",
   "payload": {
-    "message": "***Player 1 won that round!***\n\n\nPlayer 1 Health: xx/100 --- Player 2 Health xx/100"
+    "message": "***Player 1 won that round!***\n***Player 2 Takes XX Damage***\n\nPlayer 1 Health: xx/100 --- Player 2 Health xx/100"
   },
   "timestamp": 1727000000
 }
