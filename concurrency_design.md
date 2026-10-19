@@ -7,6 +7,11 @@ For this program, no locking mechanisms will be used for player moves. The game 
 
 This is not a computationally advanced program, so the potential advantage from multithreading will not be realized in this program. 
 
+Connection Lifecycle:
+*Connect  - The server will be in listen mode until both clients connect. There should be a message stating that the game is about to begin once both clients connect.
+*Client registration - The client when accepting will be given either player 1 or player 2, depending on who joined first. There's no current plan to allow for custom names/identifiers.
+*Active game loop - Since the program will use selectors, the server will wait for any event as stated above. Once something comes into the socket, it will perform the logic necessary. A timeout should also occur if no user input is detected for a long enough period of time. Though the connection will be TCP based, the program may add a heartbeat UDP ping from the client to the server to make sure that no client has disconnected/timed out.
+*Socket Teardown - After the game ends cleanup will occur, and the active sockets will be closed on both the host and client end. 
 
 # 2.2 Sequence Diagram 
 _See sequenceDiagram.md_
