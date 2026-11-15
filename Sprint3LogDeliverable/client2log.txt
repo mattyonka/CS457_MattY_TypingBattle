@@ -1,0 +1,66 @@
+anchovy:~/CS457/CS457_MattY_TypingBattle/PythonCode$ python client.py -i 0.0.0.0
+Connected to 0.0.0.0:5000.
+
+=== TYPING BATTLE: you are Player 2 ===
+Both players have connected.
+This game tests your ability to type. Try to type the phrase faster than the other player!
+The player who types the fastest will deal damage to the other player.
+First player to reach 0 life loses.
+(Type /quit at any time to leave the game.)
+
+--- Round 1 --- type this exactly, then press Enter:
+
+    Sphinx of black quartz, judge my vow.
+
+Sphinx of black quartz, judge my vow.
+Submitted! Waiting for the result...
+
+***Player 2 won that round!***
+***Player 1 Takes 50 Damage***
+
+Times: Player 1 15.78s | Player 2 10.34s
+Player 1 Health: 50/100 --- Player 2 Health: 100/100
+
+--- Round 2 --- type this exactly, then press Enter:
+
+    Speed is nothing without accuracy.
+
+Speed is nothing without accuracy.
+Submitted! Waiting for the result...
+
+***Player 2 won that round!***
+***Player 1 Takes 21 Damage***
+
+Times: Player 1 12.82s | Player 2 10.53s
+Player 1 Health: 29/100 --- Player 2 Health: 100/100
+
+--- Round 3 --- type this exactly, then press Enter:
+
+    How vexingly quick daft zebras jump!
+
+How vexingly quick daft zebras jump!
+Submitted! Waiting for the result...
+
+***Player 1 won that round!***
+***Player 2 Takes 6 Damage***
+
+Times: Player 1 13.96s | Player 2 14.84s
+Player 1 Health: 29/100 --- Player 2 Health: 94/100
+
+--- Round 4 --- type this exactly, then press Enter:
+
+    A journey of a thousand miles begins with a single step.
+
+A journey of a thousand miles begins with a single step.
+Submitted! Waiting for the result...
+
+***Player 2 won that round!***
+***Player 1 Takes 50 Damage***
+
+Times: Player 1 18.62s | Player 2 11.59s
+Player 1 Health: 0/100 --- Player 2 Health: 94/100
+
+=== GAME OVER ===
+You win! 
+
+Player 1 Health: 0/100 --- Player 2 Health: 94/100

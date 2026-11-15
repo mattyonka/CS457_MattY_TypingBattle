@@ -1,0 +1,24 @@
+anchovy:~/CS457/CS457_MattY_TypingBattle/PythonCode$ python server.py
+[server] Listening on 0.0.0.0:5000, waiting for 2 players...
+[server] Connection from 127.0.0.1:49172
+[server] Player 1 registered (127.0.0.1:49172)
+[server] Connection from 127.0.0.1:39434
+[server] Player 2 registered (127.0.0.1:39434)
+[server] Both players connected. Game is about to begin!
+[server] Round 1: 'Sphinx of black quartz, judge my vow.'
+[server] Player 2 answered correctly in 10.34s
+[server] Player 1 answered correctly in 15.78s
+[server] Round 1 result: winner=1 damage=50 health=[50, 100]
+[server] Round 2: 'Speed is nothing without accuracy.'
+[server] Player 2 answered correctly in 10.53s
+[server] Player 1 answered correctly in 12.82s
+[server] Round 2 result: winner=1 damage=21 health=[29, 100]
+[server] Round 3: 'How vexingly quick daft zebras jump!'
+[server] Player 1 answered correctly in 13.96s
+[server] Player 2 answered correctly in 14.84s
+[server] Round 3 result: winner=0 damage=6 health=[29, 94]
+[server] Round 4: 'A journey of a thousand miles begins with a single step.'
+[server] Player 2 answered correctly in 11.59s
+[server] Player 1 answered correctly in 18.62s
+[server] Round 4 result: winner=1 damage=50 health=[0, 94]
+[server] Game over. Player 2 wins
