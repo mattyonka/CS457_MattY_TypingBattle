@@ -7,7 +7,7 @@ Usage:
 
 Uses selectors to watch the server socket and the keyboard at the same time,
 so server messages show up even while you are typing. Linux/macOS terminals
-(the lab nodes) are supported; selecting on stdin does not work on Windows.
+(the lab nodes) are supported; selecting on stdin does *NOT* work on Windows.
 """
 import argparse
 import json
@@ -19,7 +19,7 @@ import time
 HELP_EPILOG = """\
 how to play:
   Each round the server sends a phrase. Type it exactly and press Enter.
-  The faster correct typist wins the round and damages the other player
+  The faster correct typer wins the round and damages the other player
   based on how much slower they were (1-50 damage). Ties do no damage.
   Both players start with 100 health; reach 0 and you lose.
   Type /quit at any time to leave the game.
@@ -139,9 +139,13 @@ class Client:
 def main():
     args = parse_args()
     try:
-        sock = socket.create_connection((args.host, args.port), timeout=10)
+        sock = socket.create_connection((args.host, args.port), timeout=5)
     except OSError as e:
         print(f"Could not connect to {args.host}:{args.port} - {e}", file=sys.stderr)
+        sys.exit(1)
+    except socket.gaierror as e:
+        print(f"[ERROR] Unable to resolve DNS hostname '{args.hostname}'.")
+        print(f"Please check your Cisco router DNS configuration ('ip dns server' / 'ip host') or verify domain spelling.")
         sys.exit(1)
     sock.settimeout(None)  # blocking socket is fine: we only recv when select says readable
     print(f"Connected to {args.host}:{args.port}.")
@@ -165,6 +169,7 @@ def main():
         client.quit()
     except OSError as e:
         print(f"Connection error: {e}", file=sys.stderr)
+
     finally:
         sel.close()
         sock.close()

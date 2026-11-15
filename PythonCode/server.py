@@ -253,7 +253,7 @@ class Server:
         for i, c in enumerate(self.players):
             self.send(c, "GAME_START", rules, player_id=f"Player_{i + 1}")
         self.state = "BETWEEN"
-        self.next_round_at = time.monotonic() + ROUND_DELAY
+        self.next_round_at = time.monotonic() + 8.0
 
     def start_round(self):
         self.round_no += 1
